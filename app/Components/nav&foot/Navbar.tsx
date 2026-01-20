@@ -11,9 +11,9 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [userProfileOpen, setUserProfileOpen] = useState(false);
-  const [user, setUser] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [userProfileOpen, setUserProfileOpen] = useState<boolean>(false);
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
     // Function to load user data
@@ -41,7 +41,7 @@ export default function Navbar() {
     };
   }, []);
 
-  const handleLogout = () => {
+  const handleLogout = (): void => {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
     setUser(null);
@@ -49,17 +49,17 @@ export default function Navbar() {
     window.location.href = '/';
   };
 
-  const getInitial = (name) => {
+  const getInitial = (name: string | undefined): string => {
     return name ? name.charAt(0).toUpperCase() : 'U';
   };
 
-  const getUserDisplayName = () => {
+  const getUserDisplayName = (): string => {
     if (user?.name) return user.name;
     if (user?.email) return user.email.split('@')[0];
     return 'User';
   };
 
-  const handleNavigation = (path) => {
+  const handleNavigation = (path: string): void => {
     window.location.href = path;
   };
 
