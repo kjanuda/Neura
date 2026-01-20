@@ -4,18 +4,28 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Zap, Activity, Wind } from 'lucide-react';
 import Link from 'next/link';
 
+interface Particle {
+  id: number;
+  width: number;
+  height: number;
+  left: number;
+  top: number;
+  duration: number;
+  delay: number;
+}
+
 const ProductPortfolio = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
 
   const product = {
     name: 'HealthGuard AI',
     category: 'IoT Health Monitor',
-    description: 'ESP32-based home patient monitoring system with DS18B20, MAX30102, and MQ-135 sensors for real-time health tracking and AI-powered anomaly detection',
+    description: 'ESP32-based home patient monitoring system with DHT11, MAX30102, and MQ-135 sensors for real-time health tracking and AI-powered anomaly detection',
     topImage: '/neu.png',
     bottomImage: '/neu1.webp',
     specs: [
-      { label: 'Temperature', value: 'DS18B20', icon: Zap },
+      { label: 'Temperature', value: 'DHT11', icon: Zap },
       { label: 'Heart Rate', value: 'MAX30102', icon: Activity },
       { label: 'Air Quality', value: 'MQ-135', icon: Wind }
     ]
