@@ -41,7 +41,7 @@ export default function HealthProtectionSection() {
       }
     };
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: { clientX: number; clientY: number; }) => {
       if (!isMobile) {
         setMousePosition({
           x: (e.clientX / window.innerWidth - 0.5) * 20,
