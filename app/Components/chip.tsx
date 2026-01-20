@@ -21,11 +21,11 @@ const ProductPortfolio = () => {
   const product = {
     name: 'HealthGuard AI',
     category: 'IoT Health Monitor',
-    description: 'ESP32-based home patient monitoring system with DHT11, MAX30102, and MQ-135 sensors for real-time health tracking and AI-powered anomaly detection',
+    description: 'ESP32-based home patient monitoring system with DS18B20, MAX30102, and MQ-135 sensors for real-time health tracking and AI-powered anomaly detection',
     topImage: '/neu.png',
     bottomImage: '/neu1.webp',
     specs: [
-      { label: 'Temperature', value: 'DHT11', icon: Zap },
+      { label: 'Temperature', value: 'DS18B20', icon: Zap },
       { label: 'Heart Rate', value: 'MAX30102', icon: Activity },
       { label: 'Air Quality', value: 'MQ-135', icon: Wind }
     ]

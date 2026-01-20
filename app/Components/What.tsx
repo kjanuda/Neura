@@ -47,7 +47,7 @@ export default function IoTHealthPage() {
                 {/* Bottom Text Under Image */}
                 <div className="mt-8 pt-6 border-t border-slate-300">
                   <p className="text-base text-slate-700 leading-relaxed">
-                    The DHT11 sensor measures body temperature, the MAX30102 monitors heart rate and blood oxygen saturation (SpO₂), and the MQ-135 tracks air quality—critical for patients with respiratory conditions like asthma. All sensor data is transmitted via Wi-Fi to a cloud server where an AI-based anomaly detection model analyzes patterns and detects abnormal changes early.
+                    The DS18B20 sensor measures body temperature, the MAX30102 monitors heart rate and blood oxygen saturation (SpO₂), and the MQ-135 tracks air quality—critical for patients with respiratory conditions like asthma. All sensor data is transmitted via Wi-Fi to a cloud server where an AI-based anomaly detection model analyzes patterns and detects abnormal changes early.
                   </p>
                 </div>
               </div>
