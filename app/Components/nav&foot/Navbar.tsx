@@ -60,6 +60,7 @@ export default function Navbar() {
   };
 
   const handleNavigation = (path: string): void => {
+    setMobileMenuOpen(false);
     window.location.href = path;
   };
 
@@ -105,8 +106,11 @@ export default function Navbar() {
                         alt="Profile" 
                         className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm"
                         onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.nextElementSibling.style.display = 'flex';
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          if (target.nextElementSibling) {
+                            (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                          }
                         }}
                       />
                     ) : null}
