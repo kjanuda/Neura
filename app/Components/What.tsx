@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 import { ArrowUpRight } from 'lucide-react';
 
 export default function IoTHealthPage() {
@@ -17,13 +18,15 @@ export default function IoTHealthPage() {
               <p className="text-lg md:text-xl text-slate-700 mb-8 leading-relaxed">
                 This IoT-based home patient monitoring system uses an ESP32 microcontroller connected to multiple health and environmental sensors to collect real-time data for continuous remote patient monitoring.
               </p>
-              
+              <Link href="/learn">
               <button className="flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors shadow-lg mb-12">
                 <ArrowUpRight className="w-6 h-6" />
                 <span className="font-semibold text-lg">More info</span>
               </button>
-            </div>
+              </Link>
 
+            </div>
+            
             {/* Right Side - System Components Card */}
             <div className="flex items-center justify-center">
               <div className="bg-gradient-to-br from-gray-100 to-slate-200 rounded-3xl p-8 w-full max-w-lg">
