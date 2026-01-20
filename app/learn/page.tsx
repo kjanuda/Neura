@@ -6,7 +6,7 @@ import { Brain, Cpu, Layers, Zap, Radio, Database, ChevronDown, ChevronUp } from
 export default function HumanoidLanding() {
   const [expandedSection, setExpandedSection] = useState(null);
 
-  const toggleSection = (section) => {
+  const toggleSection = (section: React.SetStateAction<null>) => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
