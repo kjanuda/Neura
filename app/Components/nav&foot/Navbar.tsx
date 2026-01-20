@@ -41,10 +41,6 @@ export default function Navbar() {
     };
   }, []);
 
-  const toggleDropdown = (item) => {
-    setOpenDropdown(openDropdown === item ? null : item);
-  };
-
   const handleLogout = () => {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
