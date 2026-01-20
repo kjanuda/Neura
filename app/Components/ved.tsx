@@ -3,8 +3,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 export default function AmbiqVideoHero() {
-  const videoRef = useRef(null);
-  const containerRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
