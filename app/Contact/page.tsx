@@ -12,11 +12,11 @@ export default function Contact() {
     message: ""
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
@@ -50,7 +50,7 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-gray-500 mb-1">Tel:</p>
                     <a href="tel:+94112345678" className="text-base md:text-lg text-slate-700 hover:text-blue-600 transition-colors">
-                      +94 (11) 234-5678
+                      +94 (77) 300-7426
                     </a>
                   </div>
                 </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-gray-500 mb-1">Email:</p>
                     <a href="mailto:contact@neurainnovation.com" className="text-base md:text-lg text-slate-700 hover:text-blue-600 transition-colors">
-                      contact@neurainnovation.com
+                     janudakodi@gmail.com
                     </a>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ export default function Contact() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows="4"
+                  rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                   placeholder="Tell us about your interest in our research..."
                 />
