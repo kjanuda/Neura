@@ -11,9 +11,9 @@ export default function ArchitectureDiagram() {
     return () => clearInterval(interval);
   }, []);
 
-  const getOpacity = (step) => activeStep === step ? 1 : 0.4;
-  const getScale = (step) => activeStep === step ? 1.05 : 1;
-  const getColor = (step) => {
+  const getOpacity = (step: number) => activeStep === step ? 1 : 0.4;
+  const getScale = (step: number) => activeStep === step ? 1.05 : 1;
+  const getColor = (step: number) => {
     const colors = ['#f97316', '#8b5cf6', '#3b82f6', '#ec4899', '#10b981', '#6366f1'];
     return colors[step];
   };
